@@ -7,7 +7,11 @@ const { PeerServer } = require('peer')
 const cors = require('cors')
 
 const peerServer = PeerServer({
-    port: 3000
+    host: 'https://video-chat-repo.onrender.com',
+    secure: true,
+    port: 443,
+    key:'peerjs',
+    debug: 3
 })
 
 app.set('view engine', 'ejs')
